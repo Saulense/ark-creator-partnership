@@ -432,6 +432,14 @@ body:has(.creator-landing) { color: var(--creator-white); }
     #090b0a;
 }
 
+/* Keep every declared poster width inclusive of its padding and border. */
+.creator-poster,
+.creator-poster *,
+.creator-poster *::before,
+.creator-poster *::after {
+  box-sizing: border-box;
+}
+
 .creator-poster .landing-nav {
   width: min(1160px, calc(100% - 40px));
   min-height: 82px;
@@ -745,7 +753,7 @@ body:has(.creator-landing) { color: var(--creator-white); }
 .creator-poster .tracking-intro { grid-template-columns: 1fr; max-width: 750px; margin: 0 auto; text-align: center; gap: 16px; }
 .creator-poster .tracking-intro .landing-kicker { justify-content: center; }
 .creator-poster .tracking-intro > p { font-size: 16px; }
-.creator-poster .tracking-section .performance-preview { margin-top: 36px; padding: 25px; border-radius: 26px; background: #171b18; }
+.creator-poster .tracking-section .performance-preview { margin-top: 36px; padding: 25px; border-radius: 15px; background: #171b18; }
 
 .creator-poster .creator-guide { padding: 70px 54px 50px; }
 .creator-poster .guide-grid { gap: 10px; margin-top: 38px; }
@@ -879,14 +887,14 @@ body:has(.creator-landing) { color: var(--creator-white); }
   .creator-poster .quick-path article { min-height: 0; }
 }
 
-/* Keep the fictional dashboard as one real table on phones. */
+/* Keep the dashboard as one real table on phones. */
 @media (max-width: 620px) {
   .creator-poster .tracking-section { width: calc(100% - 12px); }
-  .creator-poster .tracking-section .performance-preview { padding: 12px 8px; }
+  .creator-poster .tracking-section .performance-preview { padding: 12px 8px; border-radius: 10px; }
   .creator-poster .performance-table-wrap {
     overflow: hidden;
     border: 1px solid #dfe3df;
-    border-radius: 15px;
+    border-radius: 7px;
     background: #fff;
   }
 
