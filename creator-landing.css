@@ -1,4 +1,4 @@
-*,*::before,*::after{box-sizing:border-box}html,body{margin:0}img{max-width:100%}
+*,*::before,*::after{box-sizing:border-box}html,body{margin:0}img{max-width:100%;height:auto}
 :root {
   --creator-bg: #090b0a;
   --creator-panel: #131614;
